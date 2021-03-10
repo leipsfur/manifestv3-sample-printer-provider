@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "printProviderTest",
+  "version": "1.0.0.0",
+  "description": "Test chrome.printProvider",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "homepage_url": "https://example.com/",
+  "minimum_chrome_version": "80",
+  "offline_enabled": false,
+  "permissions": [
+    "printerProvider"
+  ],
+  "action": {},
+  "short_name": "printProviderTest",
+  "version_name": "1.0.0"
+}

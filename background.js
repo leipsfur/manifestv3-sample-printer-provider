@@ -30,9 +30,12 @@ try {
         })
     });
 
-    chrome.printerProvider.onPrintRequested.addListener((chromePrintJob, printRequestCallback) => {
-        console.log("Print requested", chromePrintJob);
+    chrome.printerProvider.onPrintRequested.addListener(async (chromePrintJob, printRequestCallback) => {
+        console.log("Print requested");
+        await chromePrintJob.document.text();
+        console.log("resolve");
         printRequestCallback("OK");
+
     });
 } catch (e) {
     console.error(e);
